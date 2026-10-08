@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CLOSETY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div id="authArea">
+
+            <section
+                id="welcomeScreen"
+                class="card auth-screen"
+            >
+
+                <h1>MY CLOSETY</h1>
+
+                <p class="subtitle">
+                    あなたの持っている服からコーデを提案します
+                </p>
+
+                <div class="auth-actions">
+
+                    <button
+                        type="button"
+                        id="showLoginButton"
+                        class="auth-primary"
+                    >
+                        ログイン
+                    </button>
+
+                    <button
+                        type="button"
+                        id="showSignupButton"
+                        class="auth-secondary"
+                    >
+                        新規登録
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section
+                id="loginScreen"
+                class="card auth-screen"
+                hidden
+            >
+
+                <h2>ログイン</h2>
+
+                <div class="auth-field">
+
+                    <label for="loginEmail">
+                        メールアドレス
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        autocomplete="email"
+                        placeholder="example@email.com"
+                    >
+
+                </div>
+
+                <div class="auth-field">
+
+                    <label for="loginPassword">
+                        パスワード
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        autocomplete="current-password"
+                        placeholder="パスワード"
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    id="loginButton"
+                    class="auth-primary"
+                >
+                    ログイン
+                </button>
+
+                <button
+                    type="button"
+                    id="forgotPasswordButton"
+                    class="auth-link"
+                >
+                    パスワードを忘れた方
+                </button>
+
+                <p
+                    id="loginMessage"
+                    class="auth-message"
+                ></p>
+
+                <button
+                    type="button"
+                    id="backFromLoginButton"
+                    class="auth-back"
+                >
+                    戻る
+                </button>
+
+            </section>
+
+            <section
+                id="signupScreen"
+                class="card auth-screen"
+                hidden
+            >
+
+                <h2>アカウントを作成</h2>
+
+                <div class="auth-field">
+
+                    <label for="signupEmail">
+                        メールアドレス
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        autocomplete="email"
+                        placeholder="example@email.com"
+                    >
+
+                </div>
+
+                <div class="auth-field">
+
+                    <label for="signupPassword">
+                        パスワード
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        autocomplete="new-password"
+                        placeholder="パスワード"
+                    >
+
+                </div>
+
+                <div class="auth-field">
+
+                    <label for="signupPasswordConfirm">
+                        パスワード確認
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupPasswordConfirm"
+                        autocomplete="new-password"
+                        placeholder="もう一度入力"
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    id="signupButton"
+                    class="auth-primary"
+                >
+                    新規登録
+                </button>
+
+                <p
+                    id="signupMessage"
+                    class="auth-message"
+                ></p>
+
+                <button
+                    type="button"
+                    id="backFromSignupButton"
+                    class="auth-back"
+                >
+                    戻る
+                </button>
+
+            </section>
+
+        </div>
+
+        <div
+            id="appArea"
+            hidden
+        >
+
+            <h1>MY CLOSETY</h1>
+
+            <p class="subtitle">
+                あなたの持っている服からコーデを提案します
+            </p>
+
+            <section class="card">
+
+                <div class="account-bar">
+
+                    <span id="userEmail"></span>
+
+                    <button
+                        type="button"
+                        id="logoutButton"
+                    >
+                        ログアウト
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section class="card">
+
+                <h2>服を登録する</h2>
+
+                <label
+                    for="clothesImage"
+                    class="upload-button"
+                >
+                    服の写真を選択
+                </label>
+
+                <input
+                    type="file"
+                    id="clothesImage"
+                    accept="image/*"
+                    multiple
+                >
+
+                <button id="saveClothesButton" type="button">
+    選択した服を保存
+</button>
+
+                <p class="hint">
+                    複数の服を選択できます
+                </p>
+
+                <div
+                    id="preview"
+                    class="preview"
+                ></div>
+
+            </section>
+
+            <section class="card">
+
+                <h2>マイクローゼット</h2>
+
+                <p
+                    id="closetStatus"
+                    class="hint"
+                >
+                    登録数を確認しています...
+                </p>
+
+                <div
+                    id="closetList"
+                    class="closet-list"
+                ></div>
+
+            </section>
+
+            <section class="card">
+
+                <h2>コーデ条件</h2>
+
+                <div class="input-group">
+
+                    <label for="temperature">
+                        気温
+                    </label>
+
+                    <input
+                        type="number"
+                        id="temperature"
+                        placeholder="25"
+                    >
+
+                    <span>℃</span>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="purpose">
+                        目的
+                    </label>
+
+                    <select id="purpose">
+
+                        <option value="普段着">
+                            普段着
+                        </option>
+
+                        <option value="大学">
+                            大学
+                        </option>
+
+                        <option value="仕事">
+                            仕事
+                        </option>
+
+                        <option value="デート">
+                            デート
+                        </option>
+
+                        <option value="遊び">
+                            遊び
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="style">
+                        系統
+                    </label>
+
+                    <select id="style">
+
+                        <option value="カジュアル">
+                            カジュアル
+                        </option>
+
+                        <option value="ストリート">
+                            ストリート
+                        </option>
+
+                        <option value="きれいめ">
+                            きれいめ
+                        </option>
+
+                        <option value="シンプル">
+                            シンプル
+                        </option>
+
+                        <option value="おまかせ">
+                            おまかせ
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <p class="hint">
+                    無料版は服30着まで、AIコーデ提案は1日1回です。
+                </p>
+
+                
+
+<button id="analyzeButton" type="button">
+    AIにコーデを提案してもらう
+</button>
+
+            </section>
+
+            <section
+                id="resultSection"
+                class="card result-card"
+            >
+
+                <h2>AIの提案</h2>
+
+                <div id="result">
+
+                    <p class="empty">
+                        服を登録して「AIにコーデを提案してもらう」を押してください。
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
