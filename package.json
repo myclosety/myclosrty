@@ -1,0 +1,31 @@
+{
+  "name": "my-closet-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script-backup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myclosety/myclosrty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/myclosety/myclosrty/issues"
+  },
+  "homepage": "https://github.com/myclosety/myclosrty#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "multer": "^2.5.0",
+    "openai": "^7.45.1",
+    "sharp": "^0.35.5",
+    "stripe": "^23.0.1"
+  }
+}

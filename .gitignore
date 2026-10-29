@@ -1,1 +1,12 @@
 .env
+
+node_modules/
+
+*.backup
+*.backup-*
+*-backup.js
+*.backup2
+outfit-old.txt
+clothes.json
+usage.json
+clothes_images/
