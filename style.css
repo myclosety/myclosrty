@@ -1993,3 +1993,51 @@ h2 {
 .settings-select { display: block; width: 100%; margin: 8px 0 0; padding: 14px;
     background: #fff; border: 1px solid var(--line); border-radius: var(--radius-small);
     color: var(--text); font: inherit; }
+/* CLOSETi Premium Natural Beige */
+#premiumScreen .premium-details {
+    background: linear-gradient(145deg, #fffcf7, #f3ede4);
+    border: 1px solid #e3d8c9;
+    color: #403c36;
+    box-shadow: 0 12px 35px rgba(90,75,55,.12);
+}
+
+#premiumScreen .premium-details h1,
+#premiumScreen .premium-details h2 {
+    color: #51473e;
+}
+
+#premiumScreen .premium-price {
+    color: #665747;
+}
+
+#premiumScreen .premium-details th,
+#premiumScreen .premium-details td {
+    color: #51473e;
+    border-bottom-color: #ded5c9;
+}
+
+#premiumScreen #upgradeButton {
+    background: linear-gradient(135deg, #a9947c, #c7b49e);
+    color: #ffffff;
+}
+
+#premiumScreen #premiumBackButton {
+    background: #f8f3ec;
+    color: #665747;
+    border: 1px solid #b9a68f;
+}
+
+/* CLOSETi Home - Natural Beige */
+
+#premiumButton {
+    background: linear-gradient(135deg, #92765D, #AD9073);
+    color: #FFFFFF;
+    border: 1px solid #92765D;
+    box-shadow: 0 4px 12px rgba(90, 65, 45, 0.15);
+}
+
+#premiumButton:hover {
+    background: linear-gradient(135deg, #80654E, #9C8065);
+    transform: translateY(-2px);
+}
+

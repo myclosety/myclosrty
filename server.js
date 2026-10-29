@@ -3941,7 +3941,7 @@ app.post(
 
 if (require.main === module) {
     app.listen(PORT, () => {
-        console.log("MY CLOSETY");
+        console.log("CLOSETi");
         console.log(`http://localhost:${PORT}`);
     });
 }
